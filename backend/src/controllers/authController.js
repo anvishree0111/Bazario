@@ -58,7 +58,12 @@ function send(res, error) {
     return res.status(error.status).json({ error: error.message, code: error.code, ...error.extra })
   }
   // Never leak SQL, stack traces or driver messages.
-  console.error('Authentication request failed', { name: error?.name || 'Error', code: error?.code || 'UNKNOWN' })
+  console.error('Authentication request failed', {
+  name: error?.name || 'Error',
+  code: error?.code || 'UNKNOWN',
+  hostname: error?.hostname,
+  message: error?.message
+})
   return res.status(500).json({ error: 'Something went wrong. Please try again.', code: 'SERVER_ERROR' })
 }
 
