@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Build folders
+dist/
+build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Optional: Mac system files
+*.swp
+*.swo
+
+# Optional: coverage reports (if using testing)
+coverage/
+
+# Optional: temporary files
+*.tmp
+*.temp
+
+# Ignore database files (if local development)
+*.sqlite
+*.db
